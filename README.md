@@ -2,15 +2,18 @@
 
 e-Learning Interface Specification
 
+_Under Construction_
+
 ## Introduction
 
 ## Guides
 
 * What is eLIS?
-* The core of eLIS: the Learning Unit (LU)
-* First LU Type: Match
-* Second LU Type: Group
-* Third LU Type: Build
+* Learning Unit (LU)
+* Learning Connection (LC)
+* First LC Type: Match
+* Second LC Type: Group
+* Third LC Type: Build
 * Creating your first exercise content
 * Adding media to your LUs
 * Reusing LUs
@@ -21,11 +24,13 @@ e-Learning Interface Specification
 * Bonus: eLIS and xAPI
 
 ## Reference
+
 * Learning Unit (LU)
-* Learning Unit Types
-* Match Learning Unit
-* Group Learning Unit
-* Build Learning Unit
+* Learning Connection (LC)
+* Match LC
+* Group LC
+* Build LC
 * Media Items
 
 ## Examples
+* _TBD_
