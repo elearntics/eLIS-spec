@@ -13,10 +13,10 @@ eLIS is an e-learning specification that is meant to standarize the way of creat
 * [What is eLIS?](/guides/1-what-is-elis.md)
 * [Learning Unit (LU)](/guides/2-learning-units.md)
 * [Learning Connection (LC)](/guides/3-learning-connections.md)
-* [Creating your first exercise](/guides/4-creating-your-first-exercise.md)
-* [Adding media](/guides/5-adding-media.md)
-* [Reusing LUs](/guides/6-reusing-learning-units.md)
-* [Testing and validating exercises](/guides/7-testing-and-validating-exercises.md)
+* Creating your first exercise _coming soon_
+* Adding media _coming soon_
+* Reusing LUs _coming soon_
+* Testing and validating exercises _coming soon_
 * Using eLIS to create a web game _coming soon_
 * eLIS web toolbox _coming soon_
 * Sharing your exercises _coming soon_
