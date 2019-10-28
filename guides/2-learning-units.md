@@ -4,7 +4,7 @@
 
 The Learning Unit is the minimum unit of information in eLIS. For example, let's say you're cooking a chocolate cake. One of the minimum units of information would be the chocolate itself. The Learning Unit of the chocolate, for this use case, could contain information about the type of chocolate, a description and even an image.
 
-We can combine several Learning Units to get something more meaningful: knowledge. If the knowledge we want to have is how to bake the chocolate cake, we would combine the chocolate LU with other possible LUs such as the sugar, or the spoon to measure the sugar.
+We can combine several Learning Units to get something more meaningful: **knowledge**. If the knowledge we want to acquire is how to bake the chocolate cake, we would combine the chocolate LU with other possible LUs such as the **sugar**, or the **spoon** to measure the sugar.
 
 ## Structure
 
@@ -32,4 +32,4 @@ This would be the equivalent structure in JSON format:
 
 ## Combining LUs
 
-The Learning Units can be combined in three different ways. In eLIS, the final result (the knowlege) is created by combining two or more Learning Units. But this combination is limited to three types: **match**, **group** and **build**. These combinations are called "Learning Connections".
+The Learning Units can be combined in three different ways. In eLIS, the final result (the knowlege) is created by combining two or more Learning Units. But this combination is limited to three types: **match**, **group** and **build**. These combinations are called **"Learning Connections"**.

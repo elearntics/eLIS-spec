@@ -6,8 +6,8 @@ eLIS is an e-learning specification that is meant to standarize the way of creat
 
 ### Reusable Learning Objects
 
-eLIS makes use of the concept of ["Reusable Learning Objects"](link TODO). The main purpose of the specification is to create a common structure to create learning resources that can be reused in different systems
+eLIS makes use of the concept of **Reusable Learning Objects**. The main purpose of the specification is to create a common structure to create learning resources that can be reused in different systems
 
 ### Is it like SCORM or xAPI?
 
-No, eLIS it's something different that can actually be used along with these specifications.
+No, eLIS is something different that can actually be used along with these standards / specifications.
