@@ -4,6 +4,10 @@
 
 Learning Connections are entities that define how to combine several Learning Units. Each Learning Connection is an actual learning resource, and they have to make use of at least one Learning Unit. There're three types of Learning Connections: **Match**, **Group**, and **Build**.
 
+- [Match (1:1)](#Match)
+- [Group (n:n)](#Group)
+- [Build (1:n)](#Build)
+
 ## Structure
 
 These are the LC fields:
@@ -33,7 +37,9 @@ This would be the equivalent structure in JSON format:
 
 ## Types of LCs
 
-### Match (1:1)
+### Match
+
+**`(1:1)`**
 
 This LC stablishes the relationship betwen two LUs or a single LUs with itself (1:1).
 
@@ -54,15 +60,16 @@ This LC stablishes the relationship betwen two LUs or a single LUs with itself (
 />
 
 #### Example 1: Animals example
-We want to create an exercise where the student has to identify the content of an animal with an image of this animal. We only need this single LU, and a LC that stablishes the relationship:
+
+We want to create an exercise where the student has to identify an animals' description with an image of this animal. We only need this single LU, and a LC that stablishes the relationship:
 
 **Learning Unit**:
 
 We've a LU that describes what's a "Cow". This LU contains:
 
-* the name of the concept ("Cow")
-* a content
-* an image of a Cow.
+* the name of the concept (`value` field)
+* a description (`content` field)
+* an image of a Cow. (`media` field)
 
 ```js
 {
@@ -90,9 +97,11 @@ We've a LU that describes what's a "Cow". This LU contains:
 
 #### Example 2: Grammar example
 
-We're creating a game to identify pairs of synonyms. We've several LUs, each one describes a word. We need a match LC for each pair of synonyms, indicating these LUs are related.
+We're creating a game to identify pairs of synonyms. We've several LUs, each one describes a word. We need a match LC for each pair of synonyms, indicating these LUs are related. In this case, we're using the pair of synonyms **exact** and **specific**.
 
-* LU: 'exact'
+**Learning Unit:**
+
+_'exact'_
 
 ```js
 {
@@ -104,7 +113,9 @@ We're creating a game to identify pairs of synonyms. We've several LUs, each one
 }
 ```
 
-* LU: 'specific'
+**Learning Unit:**
+
+_'specific'_
 
 ```js
 {
@@ -116,7 +127,7 @@ We're creating a game to identify pairs of synonyms. We've several LUs, each one
 }
 ```
 
-* LC: match
+**Learning Connection:**
 
 This simple Learning Connection only indicates that there ids `1234abcd` and  `5678efgh` are synonyms.
 
@@ -132,7 +143,9 @@ This simple Learning Connection only indicates that there ids `1234abcd` and  `5
 }
 ```
 
-### Group (n:n)
+### Group
+
+**`(n:n)`**
 
 This LC stablishes the relationship between two or more LUs. A group of LUs consist of several LUs that are classified by an specific criteria (n:n).
 
@@ -146,9 +159,11 @@ This LC stablishes the relationship between two or more LUs. A group of LUs cons
 
 Following the same structure, we're going to classify mammals.
 
-* LU: 'cow'
+**Learning Unit:**
 
-> Note: this is the same LU used in the previous example, to demonstrate the LUs are reusable and can be used in different exercises.
+_cow_
+
+> Note: this is the same LU used in the previous example, in order to demonstrate the LUs are reusable and can be used in different exercises.
 
 ```js
 {
@@ -160,7 +175,9 @@ Following the same structure, we're going to classify mammals.
 }
 ```
 
-* LU: 'lion'
+**Learning Unit:**
+
+_lion_
 
 ```js
 {
@@ -172,7 +189,9 @@ Following the same structure, we're going to classify mammals.
 }
 ```
 
-* LU: 'monkey'
+**Learning Unit:**
+
+_monkey_
 
 ```js
 {
@@ -184,6 +203,10 @@ Following the same structure, we're going to classify mammals.
 }
 ```
 
+**Learning Unit:**
+
+*mammal (result)*
+
 ```js
 {
   id: '3456mnop',
@@ -194,7 +217,9 @@ Following the same structure, we're going to classify mammals.
 }
 ```
 
-* LC: 'mammals'
+**Learning Connection:**
+
+*mammals*
 
 As we can see, the following Learning Connection has an array of values with the three ids of the Learning Units that are part of the *group*, and the **result** values is the id of the LU that describes what a mammal is.
 
@@ -211,7 +236,9 @@ As we can see, the following Learning Connection has an array of values with the
 }
 ```
 
-### Build (1:n)
+### Build
+
+**`(1:n)`**
 
 This LC stablishes the relationship between two or more LUs. The combination of this LUs is a "Result LU" that is built, in an specific way, using other LUs (1:n).
 
@@ -237,6 +264,8 @@ This **build** example illustrates the use case of having a LU that is required 
 
 Note that the `values` array in the LC object contains the hydrogen molecule LU id **twice**, as we can se in the example below:
 
+**Learning Unit:**
+
 ```js
 {
   id: '1234abcd',
@@ -246,6 +275,8 @@ Note that the `values` array in the LC object contains the hydrogen molecule LU 
   media: []
 }
 ```
+
+**Learning Unit:**
 
 ```js
 {
@@ -257,6 +288,8 @@ Note that the `values` array in the LC object contains the hydrogen molecule LU 
 }
 ```
 
+**Learning Unit (result):**
+
 ```js
 {
   id: '9102ijkl',
@@ -266,6 +299,8 @@ Note that the `values` array in the LC object contains the hydrogen molecule LU 
   media: []
 }
 ```
+
+**Learning Connection:**
 
 ```js
 {
@@ -282,6 +317,8 @@ Note that the `values` array in the LC object contains the hydrogen molecule LU 
 
 In this case, the order of the LUs is **important**. Therefore, the LC has the value **sorted** set to `true`.
 
+**Learning Unit:**
+
 ```js
 {
   id: '1234abcd',
@@ -290,6 +327,8 @@ In this case, the order of the LUs is **important**. Therefore, the LC has the v
   content: 'I'
 }
 ```
+
+**Learning Unit:**
 
 ```js
 {
@@ -300,6 +339,8 @@ In this case, the order of the LUs is **important**. Therefore, the LC has the v
 }
 ```
 
+**Learning Unit:**
+
 ```js
 {
   id: '9102ijkl',
@@ -309,6 +350,8 @@ In this case, the order of the LUs is **important**. Therefore, the LC has the v
 }
 ```
 
+**Learning Unit (result):**
+
 ```js
 {
   id: '3456mnop',
@@ -317,6 +360,8 @@ In this case, the order of the LUs is **important**. Therefore, the LC has the v
   content: 'I bought a new computer'
 }
 ```
+
+**Learning Connection:**
 
 ```js
 {
